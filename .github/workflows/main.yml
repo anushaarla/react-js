@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: build-server
 
     steps:
       - name: Checkout code
@@ -15,8 +15,7 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '14'
+        
 
       - name: Install dependencies
         run: |
@@ -36,7 +35,7 @@ jobs:
           path: build/
 
   deploy:
-    runs-on: deploy-server
+    runs-on: deploy
     needs: build
 
     steps:
