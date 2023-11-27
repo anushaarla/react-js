@@ -35,7 +35,7 @@ jobs:
           path: build/
 
   deploy:
-    runs-on: deploy
+    runs-on: deploy-server
     needs: build
 
     steps:
