@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: build-server
+    runs-on: building
 
     steps:
       - name: Checkout code
